@@ -1,0 +1,19 @@
+.Banner {
+    margin-top: 16px;
+    justify-content: center;
+    display: flex;
+}
+
+.Banner img{
+    z-index: -1;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.titleBanner {
+    border-radius: 16px;
+    padding: 8px 8px;
+    width: 300px;
+    background-color:rgb(238, 248, 248);
+    opacity: 0.9;
+}

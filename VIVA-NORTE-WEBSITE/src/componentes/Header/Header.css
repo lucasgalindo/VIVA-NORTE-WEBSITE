@@ -1,0 +1,22 @@
+header { 
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.textButton a {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.login img {
+    text-decoration: none;
+    padding-right: 32px;
+}
+
