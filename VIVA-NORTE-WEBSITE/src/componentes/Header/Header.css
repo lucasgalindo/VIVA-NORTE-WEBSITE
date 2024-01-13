@@ -1,7 +1,8 @@
 header { 
     padding: 32px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
+    align-items: center;
 }
 
 header a {
@@ -10,13 +11,26 @@ header a {
 }
 
 
-.textButton a {
-    margin-left: 8px;
-    margin-right: 8px;
+.textButton {
+    display: flex;
+    gap: 16px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
 }
 
 .login img {
+    padding-left: 16px;
+    height: 22px;
     text-decoration: none;
     padding-right: 32px;
+}
+
+
+.logo img {
+    height: 64px;
+    object-fit: contain;
 }
 

@@ -3,7 +3,7 @@ export default function Header() {
     return (
         <header>
             <div className="logo">
-                <img src="" alt="logoVivaNorte" />
+                <img src="./imagens/iconVivaNorte.png" alt="logoVivaNorte" />
             </div>
             <div className="textButton">
                 <a href="">Community</a>
@@ -17,8 +17,9 @@ export default function Header() {
             <div className="login">
                 <img src="" alt="icon sininho" />
                 <a href="">Entrar </a>
-                <a href="">/</a>
+                <a> / </a>
                 <a href=""> Criar Conta</a>
+                <img src="./imagens/profileIcon.png" alt="profileIcon" />
             </div>
         </header>
     )
