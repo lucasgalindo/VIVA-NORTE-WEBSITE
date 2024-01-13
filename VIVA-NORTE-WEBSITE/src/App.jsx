@@ -4,6 +4,10 @@ import Header from './componentes/Header'
 import Announcement from "./componentes/Announcement/announcement"
 function App() {
  
+  const picturesBanner = [
+    './imagens/bannervivanorte.jpg.png',
+    './imagens/bannervivanorte.jpg.png'
+  ]
 
 
   const pictures = [
@@ -14,7 +18,7 @@ function App() {
     <>
       <div className='container'>
       <Header/>
-      <Banner/>
+      <Banner pictures={picturesBanner}/>
       <div style={{
         display: 'flex',
         flexDirection: 'row',

@@ -1,11 +1,14 @@
 .Banner {
     margin-top: 16px;
-    justify-content: center;
     display: flex;
+    position: relative;
+    z-index: -1;
+    transition: 1s;
+    width: 100%;
 }
 
 .Banner img{
-    z-index: -1;
+    
     justify-content: center;
     border-radius: 16px;
 }
@@ -16,4 +19,9 @@
     width: 300px;
     background-color:rgb(238, 248, 248);
     opacity: 0.9;
+}
+
+.container-banner {
+    display: flex;
+    overflow-x: hidden;
 }
