@@ -1,6 +1,13 @@
+import { useContext, useState } from 'react'
 import './Header.css'
+import { LoginContext } from '../../context/profile.context'
+import ModalLogin from '../ModalLogin'
 export default function Header() {
+
+    const {credentials, setCredentials} = useContext(LoginContext)
+    const [actived, setActived] = useState(false);
     return (
+
         <header>
             <div className="logo">
                 <img src="" alt="logoVivaNorte" />
@@ -16,10 +23,11 @@ export default function Header() {
             </div>
             <div className="login">
                 <img src="" alt="icon sininho" />
-                <a href="">Entrar </a>
-                <a href="">/</a>
-                <a href=""> Criar Conta</a>
+                <button onClick={()=> {
+                    setActived(true)
+                    }}>Entrar/ Criar Conta</button>
             </div>
+            {actived ? <ModalLogin setActived={setActived}></ModalLogin> : null } 
         </header>
     )
 }
