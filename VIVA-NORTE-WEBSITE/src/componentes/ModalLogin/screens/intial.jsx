@@ -6,15 +6,16 @@ export default function Initial({ Modal, setModal, setActived }) {
     useEffect(() => {
         if (Modal == "login" || current == "login") {
             if (Modal == "initial") {
+                setTimeout(()=>{
+                    
                 setChanger("actived-to-right")
                 setCurrent(Modal);
+                }, 700)
             }
             else {
 
-                setTimeout(() => {
                     setCurrent(Modal);
                     setChanger("disabled-to-right");
-                }, 700)
             }
 
         }

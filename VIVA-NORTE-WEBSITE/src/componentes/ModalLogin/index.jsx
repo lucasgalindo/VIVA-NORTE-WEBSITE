@@ -13,13 +13,22 @@ export default function ModalLogin({setActived}){
     const [modal, setModal ] = useState("initial");
     return(
         <section className="fullscreen-container">
-        {credentials.created ? 
-            <PopUp setActived={setActived}></PopUp>
-            : <div className="modal-login">
-            <Initial setActived={setActived} setModal={setModal} Modal={modal} ></Initial>
-            <CreateNewAccount setModal={setModal} Modal={modal}></CreateNewAccount>
-            <Login setModal={setModal} Modal={modal}></Login>
-        </div>
+        {
+            !credentials.connected ? <>
+            {
+                credentials.created ? 
+                <PopUp setActived={setActived}></PopUp>
+                : <div className="modal-login">
+                <Initial setActived={setActived} setModal={setModal} Modal={modal} ></Initial>
+                <CreateNewAccount setModal={setModal} Modal={modal}></CreateNewAccount>
+                <Login setActived={setActived} setModal={setModal} Modal={modal}></Login>
+            </div>
+            }
+        
+        </>:
+        <>
+            
+        </>
         }
         </section>
     )
