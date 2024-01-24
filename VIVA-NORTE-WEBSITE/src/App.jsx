@@ -1,9 +1,7 @@
 import './app.css'
-import Header from './componentes/Header'
+import {RouterProvider, createBrowserRouter} from "react-router-dom"
 import ProviderLoginContext from "./context/profile.context"
-import PaginaAnuncio from './componentes/PaginaAnuncio'
-import Banner from './componentes/Banner' 
-import ForYou from './componentes/ForYou'
+import HomePage from './pages/HomePage'
 function App() {
  
   const picturesBanner = [
@@ -11,14 +9,18 @@ function App() {
     './imagens/bannervivanorte.jpg.png',
     './imagens/bannervivanorte.jpg.png'
   ]
+
+  const router = createBrowserRouter([
+    {path: "/", element: <HomePage />}
+  ])
+
   return (
+
+
     <ProviderLoginContext>
       <div className='container'>
-      <Header/>
-      <Banner pictures={picturesBanner}></Banner>
-      <ForYou/>
+        <RouterProvider router={router}></RouterProvider>
       </div>
-
     </ProviderLoginContext>
   )
 }

@@ -1,8 +1,8 @@
-.secaoGeral{
+.secaoGeral {
     padding: 32px;
 }
 
-.favorite-container{
+.favorite-container {
     z-index: 1;
     transition: 0.2s;
     background-color: white;
