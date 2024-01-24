@@ -40,8 +40,9 @@ export default function Login({Modal, setModal, setActived}){
         const response = await axios.post("http://localhost:8080/loginverification", credentials);
         if(response.data != []){
             const data = response.data[0];
-            context.setCredentials({data, connected : true})
+            context.setCredentials({...data, connected : true})
             setActived(false);
+            console.log(context.credentials)
         }
         setLoading(false);
     }

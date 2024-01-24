@@ -27,7 +27,6 @@ export default function Announcement({details, priceFire, priceIPTU, priceCond, 
                 aux.push("transparent")
             }
         })
-        console.log("chamado")
         setCircles(aux);
     }, [])
 

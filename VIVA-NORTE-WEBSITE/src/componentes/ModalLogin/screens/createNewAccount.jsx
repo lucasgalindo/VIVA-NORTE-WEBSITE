@@ -39,7 +39,7 @@ export default function CreateNewAccount({Modal, setModal}){
         if(await data?.status == "completed"){
             const {data} = await axios.post(urlLogin, {email: credentials.email, password: credentials.password})
             const result = data[0];
-            setTimeout(()=>context.setCredentials({...result, created: true}), 2000);
+            setTimeout(()=>context.setCredentials({...result, created: true, connected: true}), 2000);
         }
         else{
             setTimeout(()=>setLoading(false), 2000)
