@@ -2,20 +2,20 @@ import { useEffect, useState } from 'react';
 import './announcement.css'
 import location from "./../../../public/location.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faHeart as unFavorited} from "@fortawesome/free-regular-svg-icons"
+import { faHeart as unFavorited } from "@fortawesome/free-regular-svg-icons"
 import { faHeart as favorited } from '@fortawesome/free-solid-svg-icons';
 import { faFireExtinguisher } from '@fortawesome/free-solid-svg-icons';
 
-export default function Announcement({ priceFire, priceIPTU, priceCond, price, name, description, pictures, address, neighborhood, city }) {
+export default function Announcement({details, priceFire, priceIPTU, priceCond, price, name, description, pictures, address, neighborhood, city }) {
     const [diffence, setDifference] = useState(10);
     const [circles, setCircles] = useState([]);
     const [favorite, setFavorite] = useState(false);
 
     const PTReal = new Intl.NumberFormat(
         "pt-BR", {
-            style: "currency",
-            currency: "BRL"
-        }
+        style: "currency",
+        currency: "BRL"
+    }
     )
     useEffect(() => {
         let aux = []
@@ -27,11 +27,10 @@ export default function Announcement({ priceFire, priceIPTU, priceCond, price, n
                 aux.push("transparent")
             }
         })
-        console.log("chamado")
         setCircles(aux);
     }, [])
 
-    const FavoriteAnnouncement = () =>{
+    const FavoriteAnnouncement = () => {
         setFavorite(!favorite);
     }
 
@@ -56,15 +55,15 @@ export default function Announcement({ priceFire, priceIPTU, priceCond, price, n
         <div className="annoucement-container">
             <div className='info-container-announcement'>
                 <div className='first-div-span'>
-                <img src={location} style={{width: 17}} alt="" />
-                <span className='span-info-adress'>{neighborhood}, {city}</span>
+                    <img src={location} style={{ width: 17 }} alt="" />
+                    <span className='span-info-adress'>{neighborhood}, {city}</span>
                 </div>
                 <span style={{
                     fontWeight: 500
                 }}>{address}</span>
             </div>
             <button onClick={FavoriteAnnouncement} className={`favorite-container ${favorite ? "actived-favorited" : ""}`}>
-                <FontAwesomeIcon icon={ favorite ? favorited : unFavorited} color={favorite ? 'red' : undefined}/>
+                <FontAwesomeIcon icon={favorite ? favorited : unFavorited} color={favorite ? 'red' : undefined} />
             </button>
             <div style={{ left: diffence }} className='container-slide-photos'>
                 {
@@ -78,7 +77,7 @@ export default function Announcement({ priceFire, priceIPTU, priceCond, price, n
             </div>
             <div className="circles-container">
                 {
-                    
+
                     circles.map((element, key) => {
                         const size = key * 423;
                         return (
@@ -87,14 +86,31 @@ export default function Announcement({ priceFire, priceIPTU, priceCond, price, n
                     })
                 }
             </div>
-            <span className='announcement-name-apt'>{name}</span>   
+            <span className='announcement-name-apt'>{name}</span>
             <span className='announcement-description-apt'>{description}</span>
             <span className="announcement-price-apt">{PTReal.format(price)}</span>
             <div className='announcement-prices'>
                 <span>Cond {PTReal.format(priceCond)} </span>
-                <span>| IPTU {PTReal.format(priceIPTU) } </span>
-                <span>| <FontAwesomeIcon icon={faFireExtinguisher}/> {PTReal.format(priceFire)}</span>
+                <span>| IPTU {PTReal.format(priceIPTU)} </span>
+                <span>| <FontAwesomeIcon icon={faFireExtinguisher} /> {PTReal.format(priceFire)}</span>
             </div>
+
+
+            <div className='details-announcement'>
+                <div>
+                    <img src="./bed.png" width={16} alt="" />
+                    <span>{details.bedrooms} Quartos</span>
+                </div>
+                <div>
+                    <img src="./shower.png" width={16} alt="" /></div>
+                    <span>{details.bathrooms} Banheiros</span>
+                <div>
+                    <img src="./area.png" width={16} alt="" /></div>
+                    <span>{details.area} m²</span>
+            </div>
+            <button className='button-message'>
+                Mensagem
+            </button>
         </div>
     );
 }

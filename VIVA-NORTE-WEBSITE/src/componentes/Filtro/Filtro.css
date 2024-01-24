@@ -1,0 +1,74 @@
+.linkFiltro {
+    text-decoration: none; 
+}
+
+
+.containerFiltros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtroCentral {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #D6D6D6;
+    border-radius: 64px;
+    width: 794px;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.filtroCentral div {
+    display: flex;
+}
+
+.filtroTipoImovel {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.textForLeft {
+    flex-direction: column;
+}
+
+.filtroTipoImovel p,
+.filtroLoc p,
+.filtroTipoValor p {
+    margin-top: -16px;
+}
+
+.filtroLoc img,
+.filtroTipoValor img {
+    height: 22px;
+    margin-right: 16px; 
+}
+
+.filtroCentral h3 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #262729;
+}
+
+.filtroCentral p {
+    max-width: 210px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #A3A3A3;
+}
+
+.filtroLoc,
+.filtroTipoValor {
+    align-items: center;
+}
+
+.filtroTipoImovel,
+.filtroLoc {
+    height: 40px;
+    width: 238px;
+    border-right: 2px solid #EBEBEB;
+}

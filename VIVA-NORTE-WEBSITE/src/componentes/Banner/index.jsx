@@ -1,15 +1,73 @@
 import './Banner.css'
+import { useEffect, useState } from 'react';
 
-export default function Banner() {
+export default function Banner({ pictures }) {
+
+    const [diffence, setDifference] = useState(33.33);
+    const [circles, setCircles] = useState([]);
+
+    const ChangeImageToLeft = (size, key) => {
+        const initial = 33.33;
+        circles.forEach((circle, index) => {
+            if (index != key) {
+                circles[index] = "transparent";
+            }
+            else {
+                circles[index] = "white";
+            }
+        })
+        setDifference(initial - size);
+    }
+
+    useEffect(() => {
+        let aux = []
+        pictures.forEach(element => {
+            if (aux.length === 0) {
+                aux.push("white")
+            }
+            else {
+                aux.push("transparent")
+            }
+        })
+        console.log("chamado")
+        setCircles(aux);
+    }, [])
+
     return (
         <div>
-            <div className='Banner'>
-                <img src="" alt="banner" />
-            </div>
+            <div className='container-banner'>
+                <div className='Banner'
+                    style={{
+                        transform: `translateX(${diffence}%)`
+                    }}>
+                    {pictures.map(foto => {
+                        return (
+                            <div className='container-image' style={{
+                                backgroundImage: `url(${foto})`,
+                            }}></div>
+                        )
+                    })}
+                </div>
             <div className='titleBanner'>
-                <h2>Encontre um <br/>apartamento para você!</h2>
+                <h2>Encontre um <br />apartamento para você!</h2>
                 <p>Nós temos as melhores opções da Zona Norte separados para você!</p>
             </div>
+            <div className="circles-container">
+                {
+
+                    circles.map((element, key) => {
+                        const size = key * (33.33);
+                        return (
+                            <div onClick={(e) => ChangeImageToLeft(size, key)} style={{ backgroundColor: circles[key] }} key={key} className="announcement-circles"></div>
+                        )
+                    })
+                }
+            </div>
+            </div>
+
+
+
+
         </div>
 
     )

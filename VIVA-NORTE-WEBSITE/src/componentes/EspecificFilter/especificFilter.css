@@ -1,0 +1,143 @@
+.modal-especific-filter{
+    animation: animationStartModal 0.7s;
+    background-color: white;
+    max-width: 882px;
+    max-height: 773px;
+    width: 70%;
+    height: 80%;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.modal-especific-filter > p {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.filter-title{
+    margin-top: 50px;
+}
+
+
+
+
+.area-minima-filter{
+
+    padding: 10px;
+    padding-right: 35px !important;
+    width: 50px;
+    border: 1px solid black;
+    
+}
+.area-minima-filter::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+.area-field{
+    height: 30px;
+    position: relative;
+    width: 130px;
+}
+
+
+.area{
+
+    position: absolute;
+    top: 9px;
+    right: 40px;
+}
+
+
+
+.inline-filters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-weight: 500;
+    position: relative;
+}
+.separator-filters > input{
+    all: unset;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.separator-filters > input:checked::after{
+    content: "";
+    background-image: url("./icon.png");
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+}
+
+.separator-filters > input:checked{
+    all: unset;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #B2B2B2;
+}
+
+.separator-filters{
+    position: relative;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+
+
+.switch {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+  }
+  
+  .switch + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  }
+
+  .switch--shadow + label {
+    padding: 2px;
+    width: 60px;
+    height: 30px;
+    background-color: #dddddd;
+    border-radius: 60px;
+  }
+  .switch--shadow:checked + label:before {
+    background-color: #B2B2B2;
+  }
+  .switch--shadow:checked + label:after {
+    transform: translateX(31px);
+  }
+  
+  .switch--shadow + label:before,
+.switch--shadow + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: '';
+}
+.switch--shadow + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: all 0.7s;
+}
+.switch--shadow + label:after {
+  width: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}

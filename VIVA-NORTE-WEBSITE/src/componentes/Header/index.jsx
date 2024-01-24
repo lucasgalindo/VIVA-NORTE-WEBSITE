@@ -1,9 +1,18 @@
+import { useContext, useState } from 'react'
 import './Header.css'
+import { LoginContext } from '../../context/profile.context'
+import ModalLogin from '../ModalLogin'
+import HeaderLogged from '../HeaderLogged'
+
+
 export default function Header() {
-    return (
+
+    const {credentials, setCredentials} = useContext(LoginContext)
+    const [actived, setActived] = useState(false);
+    return credentials.connected ? (<HeaderLogged></HeaderLogged>) : (
         <header>
             <div className="logo">
-                <img src="" alt="logoVivaNorte" />
+                <img src="./imagens/iconVivaNorte.png" alt="logoVivaNorte" />
             </div>
             <div className="textButton">
                 <a href="">Community</a>
@@ -15,11 +24,13 @@ export default function Header() {
                 <a href="">Contact</a>
             </div>
             <div className="login">
-                <img src="" alt="icon sininho" />
-                <a href="">Entrar </a>
-                <a href="">/</a>
-                <a href=""> Criar Conta</a>
+                <img src="./bell.png" className='bellIcon' alt="icon sininho" />
+                <button onClick={()=> {
+                    setActived(true)
+                    }}>Entrar/ Criar Conta</button>
             </div>
+            {actived ? <ModalLogin setActived={setActived}></ModalLogin> : null } 
         </header>
-    )
+    ) 
 }
+        

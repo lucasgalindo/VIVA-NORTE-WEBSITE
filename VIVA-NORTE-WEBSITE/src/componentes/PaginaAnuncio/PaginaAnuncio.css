@@ -1,0 +1,64 @@
+.secaoGeral {
+    padding: 32px;
+}
+
+.favorite-container {
+    z-index: 1;
+    transition: 0.2s;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border: none;
+    font-size: 20px;
+}
+
+.actived-favorited{
+    animation: ActivedFav 1s;
+}
+
+@keyframes ActivedFav {
+    0%{
+        transform: scale(0.8);
+    }
+    40%{
+        transform: scale(1.1);
+    }
+    70%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+
+.favorite-container:hover{
+    transform: scale(1.05);
+}
+
+.secaoGeral img{
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+.gapTitulo{
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.favoritarAnuncio{
+    align-items: center;
+    display: flex;
+}
+
+.favoritarAnuncio p{
+    margin-left: 8px;
+}
+
+.fotosAnuncio{
+    flex-direction: row;
+    display: flex;
+}
