@@ -1,6 +1,8 @@
 import './app.css'
+import CaracteristicasImovel from './componentes/CaracteristicasImovel'
 import Header from './componentes/Header'
 import PaginaAnuncio from './componentes/PaginaAnuncio'
+import TituloPagAnun from './componentes/TituloPagAnun'
 function App() {
  
   const picturesBanner = [
@@ -14,6 +16,8 @@ function App() {
       <div className='container'>
       <Header/>
       <PaginaAnuncio/>
+      <TituloPagAnun />
+      <CaracteristicasImovel/>
       </div>
     </>
   )
