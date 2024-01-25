@@ -12,7 +12,7 @@ export default function Header() {
     return credentials.connected ? (<HeaderLogged></HeaderLogged>) : (
         <header>
             <div className="logo">
-                <img src="./imagens/iconVivaNorte.png" alt="logoVivaNorte" />
+                <img src="../../../public/imagens/iconVivaNorte.png" alt="logoVivaNorte" />
             </div>
             <div className="textButton">
                 <a href="">Community</a>
@@ -24,7 +24,7 @@ export default function Header() {
                 <a href="">Contact</a>
             </div>
             <div className="login">
-                <img src="./bell.png" className='bellIcon' alt="icon sininho" />
+                <img src="../../../public/bell.png" className='bellIcon' alt="icon sininho" />
                 <button onClick={()=> {
                     setActived(true)
                     }}>Entrar/ Criar Conta</button>

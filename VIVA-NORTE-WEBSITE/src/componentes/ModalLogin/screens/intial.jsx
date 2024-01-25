@@ -38,7 +38,7 @@ export default function Initial({ Modal, setModal, setActived }) {
                 <button className="modal-button-x" onClick={() => setActived(false)}></button>
                 <span className="modal-title">Entrar/ Criar conta</span>
             </div>
-            <img width={212} style={{ marginTop: 60, marginBottom: 40 }} src="./logoVivaNorte.png" alt="" />
+            <img width={212} style={{ marginTop: 60, marginBottom: 40 }} src="../../../public/logoVivaNorte.png" alt="" />
             <span className="wellcome-title">Bem vindo a Viva Norte!</span>
             <span className="wellcome-subtitle">Aqui você encontra o seu lugar na Zona Norte de Recife-PE.</span>
             <div className="buttons-section">
@@ -47,7 +47,7 @@ export default function Initial({ Modal, setModal, setActived }) {
             </div>
             <div className="or-container"><span>Ou</span></div>
             <button className="google-button button-generic-modal">
-                <img src="./google_icon.png" alt="" />
+                <img src="../../../public/google_icon.png" alt="" />
                 <span>Continuar com o Google</span>
             </button>
         </div>

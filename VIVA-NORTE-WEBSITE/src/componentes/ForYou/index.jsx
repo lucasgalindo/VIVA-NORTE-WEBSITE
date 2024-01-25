@@ -36,69 +36,88 @@ export default function ForYou() {
             </div>
             <div className='anuncioForYou'>
 
-                <Announcement
+            <Announcement
+                    id={1}
                     priceCond={300}
                     priceFire={150}
                     priceIPTU={1000}
                     price={390000}
-                    details={details}
                     name={"Prince Antonio Maia"}
                     description={"Loft Prince Antônio Maia individual com uma área de aprox. 60m² quadrados."}
-                    neighborhood={"Penis"}
+                    neighborhood={"Tejipio"}
                     city={"Recife"}
-                    address={"Av. Meu pau na bunda de Quem ta lendo"}
+                    details={details}
+                    address={"Av. Barreto de Menezes"}
                     pictures={pictures}
                 />
-                <Announcement
+            <Announcement
+                    id={1}
                     priceCond={300}
-                    details={details}
                     priceFire={150}
                     priceIPTU={1000}
                     price={390000}
                     name={"Prince Antonio Maia"}
                     description={"Loft Prince Antônio Maia individual com uma área de aprox. 60m² quadrados."}
-                    neighborhood={"Penis"}
+                    neighborhood={"Tejipio"}
                     city={"Recife"}
-                    address={"Av. Meu pau na bunda de Quem ta lendo"}
+                    details={details}
+                    address={"Av. Barreto de Menezes"}
                     pictures={pictures}
                 />
-                <Announcement
+            <Announcement
+                    id={1}
                     priceCond={300}
                     priceFire={150}
                     priceIPTU={1000}
-                    details={details}
                     price={390000}
                     name={"Prince Antonio Maia"}
                     description={"Loft Prince Antônio Maia individual com uma área de aprox. 60m² quadrados."}
-                    neighborhood={"Penis"}
+                    neighborhood={"Tejipio"}
                     city={"Recife"}
-                    address={"Av. Meu pau na bunda de Quem ta lendo"}
+                    details={details}
+                    address={"Av. Barreto de Menezes"}
                     pictures={pictures}
                 />
-                <Announcement
+            <Announcement
+                    id={1}
                     priceCond={300}
                     priceFire={150}
-                    details={details}
                     priceIPTU={1000}
                     price={390000}
                     name={"Prince Antonio Maia"}
                     description={"Loft Prince Antônio Maia individual com uma área de aprox. 60m² quadrados."}
-                    neighborhood={"Penis"}
+                    neighborhood={"Tejipio"}
                     city={"Recife"}
-                    address={"Av. Meu pau na bunda de Quem ta lendo"}
+                    details={details}
+                    address={"Av. Barreto de Menezes"}
                     pictures={pictures}
                 />
-                <Announcement
+            <Announcement
+                    id={1}
                     priceCond={300}
                     priceFire={150}
                     priceIPTU={1000}
                     price={390000}
                     name={"Prince Antonio Maia"}
                     description={"Loft Prince Antônio Maia individual com uma área de aprox. 60m² quadrados."}
-                    neighborhood={"Penis"}
+                    neighborhood={"Tejipio"}
                     city={"Recife"}
                     details={details}
-                    address={"Av. Meu pau na bunda de Quem ta lendo"}
+                    address={"Av. Barreto de Menezes"}
+                    pictures={pictures}
+                />
+            <Announcement
+                    id={1}
+                    priceCond={300}
+                    priceFire={150}
+                    priceIPTU={1000}
+                    price={390000}
+                    name={"Prince Antonio Maia"}
+                    description={"Loft Prince Antônio Maia individual com uma área de aprox. 60m² quadrados."}
+                    neighborhood={"Tejipio"}
+                    city={"Recife"}
+                    details={details}
+                    address={"Av. Barreto de Menezes"}
                     pictures={pictures}
                 />
                 {

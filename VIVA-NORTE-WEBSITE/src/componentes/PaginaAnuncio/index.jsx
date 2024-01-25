@@ -27,13 +27,14 @@ export default function PaginaAnuncio() {
             </div>
             <div className='fotosAnuncio'>
                 <div className='fotoPrincipal'>
-                    <img src="./imagens/fotoTeste.png" alt="foto principal" />
+                    <img src="../../../public/imagens/fototeste.png" alt="foto principal" />
                 </div>
                 <div className='fotosSecundarias'>
-                    <img src="./imagens/fotoTeste2.png" />
-                    <img src="./imagens/fotoTeste2.png" />
-                    <img src="./imagens/fotoTeste2.png" />
-                    <img src="./imagens/fotoTeste2.png" />
+                    <img src="../../../public/imagens/fototeste2.png" />
+                    <img src="../../../public/imagens/fototeste2.png" />
+                    <img src="../../../public/imagens/fototeste2.png" />
+                    <img src="../../../public/imagens/fototeste2.png" />
+                    
                 </div>
             </div>
         </section>

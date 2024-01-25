@@ -1,6 +1,6 @@
 import './Filtro.css'
 
-export default function () {
+export default function Filter () {
     return (
 
         <section className='containerFiltros'>

@@ -1,7 +1,7 @@
 import Banner from "../componentes/Banner"
+import Filter from "../componentes/Filtro"
 import ForYou from "../componentes/ForYou"
 import Header from "../componentes/Header"
-
 
 export default function HomePage() {
     
@@ -14,6 +14,7 @@ export default function HomePage() {
         <>
             <Header />
             <Banner pictures={picturesBanner}></Banner>
+            <Filter></Filter>
             <ForYou />
         </>
     )

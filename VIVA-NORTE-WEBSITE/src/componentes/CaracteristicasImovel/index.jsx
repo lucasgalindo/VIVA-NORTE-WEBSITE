@@ -1,5 +1,5 @@
 import './CaracteristicasImovel.css'
-
+import imagemtest from "../../../public/imagens/tamanhoM2.png"
 export default function CaracteristicasImovel() {
     return (
         <section className='sectionGeral'>
@@ -7,43 +7,43 @@ export default function CaracteristicasImovel() {
             <div className='containerGeral'>
                 <div className='containerEsq'>
                     <div className='alinharItens2'>
-                        <img src="./imagens/tamanhoM2.png" />
+                        <img src="../../../public/imagens/tamanhoM2.png" />
                         <p> Área de serviço </p>
                     </div>
                     <div className='alinharItens2'>
-                        <img src="./imagens/tamanhoM2.png" />
+                        <img src="../../../public/imagens/tamanhoM2.png" />
                         <p> Elevador </p>
                     </div>
                     <div className='alinharItens2'>
-                        <img src="./imagens/tamanhoM2.png" />
+                        <img src="../../../public/imagens/tamanhoM2.png" />
                         <p> Cozinha </p>
                     </div>
                     <div className='alinharItens2'>
-                        <img src="./imagens/tamanhoM2.png" />
+                        <img src="../../../public/imagens/tamanhoM2.png" />
                         <p> Interfone </p>
                     </div>
                     <div className='alinharItens2'>
-                        <img src="./imagens/tamanhoM2.png" />
+                        <img src="../../../public/imagens/tamanhoM2.png" />
                         <p> Quarto suíte </p>
                     </div>
                     <div className='alinharItens2'>
-                        <img src="./imagens/tamanhoM2.png" />
+                        <img src="../../../public/imagens/tamanhoM2.png" />
                         <p> Playgorund </p>
                     </div>
                     <div className='alinharItens2'>
-                        <img src="./imagens/tamanhoM2.png" />
+                        <img src="../../../public/imagens/tamanhoM2.png" />
                         <p> Armários embutidos </p>
                     </div>
                     <div className='alinharItens2'>
-                        <img src="./imagens/tamanhoM2.png" />
+                        <img src="../../../public/imagens/tamanhoM2.png" />
                         <p> Segurança 24h </p>
                     </div>
                     <div className='alinharItens2'>
-                        <img src="./imagens/tamanhoM2.png" />
+                        <img src="../../../public/imagens/tamanhoM2.png" />
                         <p> Ventilação </p>
                     </div>
                     <div className='alinharItens2'>
-                        <img src="./imagens/tamanhoM2.png" />
+                        <img src="../../../public/imagens/tamanhoM2.png" />
                         <p> Vigia </p>
                     </div>
                     <div className='exibirTodasCaracteristicas'>
