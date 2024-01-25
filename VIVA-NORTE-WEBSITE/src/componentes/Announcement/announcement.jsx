@@ -5,8 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as unFavorited } from "@fortawesome/free-regular-svg-icons"
 import { faHeart as favorited } from '@fortawesome/free-solid-svg-icons';
 import { faFireExtinguisher } from '@fortawesome/free-solid-svg-icons';
+import { Navigate, useNavigate } from 'react-router-dom';
 
-export default function Announcement({details, priceFire, priceIPTU, priceCond, price, name, description, pictures, address, neighborhood, city }) {
+export default function Announcement({details, id, priceFire, priceIPTU, priceCond, price, name, description, pictures, address, neighborhood, city }) {
     const [diffence, setDifference] = useState(10);
     const [circles, setCircles] = useState([]);
     const [favorite, setFavorite] = useState(false);
@@ -51,6 +52,7 @@ export default function Announcement({details, priceFire, priceIPTU, priceCond, 
 
 
 
+    const navigate = useNavigate();
     return (
         <div className="annoucement-container">
             <div className='info-container-announcement'>
@@ -86,7 +88,9 @@ export default function Announcement({details, priceFire, priceIPTU, priceCond, 
                     })
                 }
             </div>
-            <span className='announcement-name-apt'>{name}</span>
+            <span style={{cursor: "pointer"}} onClick={()=>{
+                    navigate(`/anuncio/${id}`)
+                }} className='announcement-name-apt'>{name}</span>
             <span className='announcement-description-apt'>{description}</span>
             <span className="announcement-price-apt">{PTReal.format(price)}</span>
             <div className='announcement-prices'>

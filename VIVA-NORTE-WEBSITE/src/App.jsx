@@ -2,20 +2,18 @@ import './app.css'
 import {RouterProvider, createBrowserRouter} from "react-router-dom"
 import ProviderLoginContext from "./context/profile.context"
 import HomePage from './pages/HomePage'
+import AnnouncementPage from './pages/AnnouncementPage'
+
+
 function App() {
  
-  const picturesBanner = [
-    './imagens/bannervivanorte.jpg.png',
-    './imagens/bannervivanorte.jpg.png',
-    './imagens/bannervivanorte.jpg.png'
-  ]
 
   const router = createBrowserRouter([
-    {path: "/", element: <HomePage />}
+    {path: "/", element: <HomePage />},
+    {path: "/anuncio/:id", element: <AnnouncementPage />}
   ])
 
   return (
-
 
     <ProviderLoginContext>
       <div className='container'>
@@ -25,4 +23,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

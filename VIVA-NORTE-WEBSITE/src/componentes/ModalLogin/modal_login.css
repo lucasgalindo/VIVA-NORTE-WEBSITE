@@ -52,7 +52,7 @@
 }
 
 .hiding{
-    background-image: url("./Hide.png");
+    background-image: url("../../../public/Hide.png");
     width: 40px;
     position: absolute;
     z-index: 2;
@@ -386,7 +386,7 @@
     width: 100%;
 }
 .modal-button-x{
-    background-image: url("./x.png");
+    background-image: url("../../../public/x.png");
     background-size: cover;
     height: 16px;
     width: 16px;
@@ -396,7 +396,7 @@
     outline: none;
 }
 .modal-button-back{
-    background-image: url("./backButton.png");
+    background-image: url("../../../public/backButton.png");
     background-size: contain;
     background-repeat: no-repeat;
     height: 16px;
@@ -482,7 +482,7 @@
     cursor: pointer;
     position: relative;
     background-color: transparent;
-    background-image: url("./changeImage.png");
+    background-image: url("../../../public/changeImage.png");
     min-width: 100px;
     background-size: cover;
     border-radius: 50%;
@@ -492,7 +492,7 @@
 
 .input-choose-image::after{
     content: '';
-    background-image: url("./choose-icon.png");
+    background-image: url("../../../public/choose-icon.png");
     width: 25px;
     height: 25px;
     right: 5px;
@@ -551,7 +551,7 @@
 .terms-conditions > input:checked{
     border: 1px solid #6C6C6C;
     background-color: #6C6C6C;
-    background-image: url("./icon.png");
+    background-image: url("../../../public/icon.png");
     background-position: center;
     background-repeat: no-repeat;
 }

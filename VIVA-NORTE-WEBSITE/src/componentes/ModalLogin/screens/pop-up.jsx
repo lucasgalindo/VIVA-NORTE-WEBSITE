@@ -15,7 +15,7 @@ export default function PopUp({ setActived }) {
             <img className="profileImage" src={credentials.picture} alt="" />
             <div>
                 <span>{credentials.name}</span>
-                <img src="./person.crop.circle.badge.checkmark.png" alt="" />
+                <img src="../../../public/person.crop.circle.badge.checkmark.png" alt="" />
             </div>
                 <span className="wellcoming-span">Olá, {credentials.name}, sua conta na Viva Norte foi
                 criada com sucesso, é um prazer ter você conosco! </span>
