@@ -1,6 +1,4 @@
-
-
-import "./especificfilter.css"
+import "./especificFilter.css"
 
 export default function EspecificFilter({setClickButtonFilter}) {
     return (

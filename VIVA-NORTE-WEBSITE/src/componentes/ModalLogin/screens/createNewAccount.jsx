@@ -122,24 +122,24 @@ export default function CreateNewAccount({Modal, setModal}){
                             <input onChange={({target})=>setCredentials({...credentials, name: target.value})} type="text" placeholder="Insirar o nome de usuário aqui" name="name" id="name"/>
                         </div>
                         <div className="input-field">
-                            <label htmlFor="name">Email</label>
-                            <input onChange={({target})=>setCredentials({...credentials, email: target.value})} type="email" placeholder="Insirar o email do usuário aqui" name="name" id="name"/>
+                            <label htmlFor="email">Email</label>
+                            <input onChange={({target})=>setCredentials({...credentials, email: target.value})} type="email" placeholder="Insirar o email do usuário aqui" name="email" id="email"/>
                         </div>
                         <div className="input-field">
-                            <label htmlFor="name">Telefone</label>
-                            <input onChange={({target})=>setCredentials({...credentials, phone: target.value})} type="text" placeholder="Digite o número do seu telefone" name="name" id="name"/>
+                            <label htmlFor="phone">Telefone</label>
+                            <input onChange={({target})=>setCredentials({...credentials, phone: target.value})} type="text" placeholder="Digite o número do seu telefone" name="phone" id="phone"/>
                         </div>
                         <div className="input-field">
-                            <label htmlFor="name">Senha</label>
-                            <input onChange={({target})=>setCredentials({...credentials, password: target.value})} type="password" placeholder="*********" name="name" id="name"/>
+                            <label htmlFor="password">Senha</label>
+                            <input onChange={({target})=>setCredentials({...credentials, password: target.value})} type="password" placeholder="*********" name="password" id="password"/>
                         </div>
                         <div className="input-field">
-                            <label htmlFor="name">CPF</label>
-                            <input onChange={({target})=>{setCredentials({...credentials, cpf: target.value})}} type="text" placeholder="Digite o número do seu CPF" name="name" id="name"/>
+                            <label htmlFor="cpf">CPF</label>
+                            <input onChange={({target})=>{setCredentials({...credentials, cpf: target.value})}} type="text" placeholder="Digite o número do seu CPF" name="cpf" id="cpf"/>
                         </div>
                         <div className="input-field">
-                            <label htmlFor="name">Data de Nascimento</label>
-                            <input onChange={({target})=>{setCredentials({...credentials, date: target.value})}} type="text" placeholder="dd/mm/yyyy" name="name" id="name"/>
+                            <label htmlFor="date">Data de Nascimento</label>
+                            <input onChange={({target})=>{setCredentials({...credentials, date: target.value})}} type="date" placeholder="dd/mm/yyyy" name="date" id="date"/>
                         </div>
                         <div className="container-terms">
                             <div className="terms-conditions">

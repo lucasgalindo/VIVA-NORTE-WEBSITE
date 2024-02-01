@@ -3,9 +3,29 @@
 }
 
 .descricao{
+    flex-wrap: wrap;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
+}
+
+@media (width < 1266px) {
+    .descricao{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .descricao,.tituloPagina, .valoresAnuncio{
+        
+        text-align: start;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .valoresAnuncio h3{
+        text-align: start;
+        margin-left: 0;
+    }
 }
 
 .tituloPagina {
@@ -44,6 +64,7 @@
 
 .descricao h3{
     margin-bottom: 0;
+    text-transform: capitalize;
 }
 
 .valoresAnuncio{

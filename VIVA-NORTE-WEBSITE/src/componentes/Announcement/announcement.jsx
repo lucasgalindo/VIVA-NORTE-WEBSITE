@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import './announcement.css'
 import location from "./../../../public/location.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,7 +18,7 @@ export default function Announcement({details, id, priceFire, priceIPTU, priceCo
         currency: "BRL"
     }
     )
-    useEffect(() => {
+    useLayoutEffect(() => {
         let aux = []
         pictures.forEach(element => {
             if (aux.length === 0) {

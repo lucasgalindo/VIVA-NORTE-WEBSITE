@@ -1,6 +1,7 @@
 .login-profile-image{
     width: 40px;
-    height: 40px;
+    height: 40px !important;
     object-fit: cover;
+    margin-left:20px;
     border-radius: 50%;
 }

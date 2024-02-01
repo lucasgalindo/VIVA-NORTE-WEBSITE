@@ -1,12 +1,25 @@
 .sectionGeral{
     margin-top: -40px;
+    display: flex;
+    flex-direction: column;
     padding: 32px;
+}
+
+@media (width < 1162px) {
+    .sectionGeral{
+        align-items: center;
+    }
+    .containerGeral{
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .containerGeral{
     
     justify-content: space-between;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .containerEsq{
@@ -55,7 +68,8 @@
 .containerDir{
     align-items: center;
     gap: 22px;
-    margin-top: -100px;
+    margin-bottom: 60px;
+    margin-top: 60px;
     padding: 38px 17px 38px 25px;
     width: 471px;
     height: 278px;

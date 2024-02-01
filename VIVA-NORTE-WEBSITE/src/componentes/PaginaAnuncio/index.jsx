@@ -3,8 +3,8 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faHeart as unFavorited} from "@fortawesome/free-regular-svg-icons"
 import { faHeart as favorited } from '@fortawesome/free-solid-svg-icons';
-
-export default function PaginaAnuncio() {
+import Photos from "./components/photos"
+export default function PaginaAnuncio({data}) {
 
     const [favorite, setFavorite] = useState(false);
 
@@ -19,7 +19,7 @@ export default function PaginaAnuncio() {
                     <h2> Prince Antônio Maia </h2>
                 </div>
                 <div className='favoritarAnuncio'>
-                    <button onClick={FavoriteAnnouncement} className={`favorite-container ${favorite ? "actived-favorited" : ""}`}>
+                    <button onClick={FavoriteAnnouncement} className={`favorite-container-pag ${favorite ? "actived-favorited" : ""}`}>
                     <FontAwesomeIcon icon={ favorite ? favorited : unFavorited} color={favorite ? 'red' : undefined}/>
                     </button>
                     <p>Favoritar</p>
@@ -27,13 +27,10 @@ export default function PaginaAnuncio() {
             </div>
             <div className='fotosAnuncio'>
                 <div className='fotoPrincipal'>
-                    <img src="../../../public/imagens/fototeste.png" alt="foto principal" />
+                    <img className="main-photo" src={data.pictures[0].url} alt="foto principal" />
                 </div>
                 <div className='fotosSecundarias'>
-                    <img src="../../../public/imagens/fototeste2.png" />
-                    <img src="../../../public/imagens/fototeste2.png" />
-                    <img src="../../../public/imagens/fototeste2.png" />
-                    <img src="../../../public/imagens/fototeste2.png" />
+                    <Photos data={data}></Photos>
                     
                 </div>
             </div>

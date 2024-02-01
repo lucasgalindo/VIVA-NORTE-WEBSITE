@@ -1,5 +1,5 @@
 import './Banner.css'
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 export default function Banner({ pictures }) {
 
@@ -19,7 +19,7 @@ export default function Banner({ pictures }) {
         setDifference(initial - size);
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         let aux = []
         pictures.forEach(element => {
             if (aux.length === 0) {
@@ -40,9 +40,9 @@ export default function Banner({ pictures }) {
                     style={{
                         transform: `translateX(${diffence}%)`
                     }}>
-                    {pictures.map(foto => {
+                    {pictures.map((foto, key) => {
                         return (
-                            <div className='container-image' style={{
+                            <div key={key} className='container-image' style={{
                                 backgroundImage: `url(${foto})`,
                             }}></div>
                         )
