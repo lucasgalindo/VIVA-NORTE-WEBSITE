@@ -37,7 +37,7 @@ export default function ForYou() {
             <div className='anuncioForYou'>
 
             <Announcement
-                    id={1}
+                    id={"4f651f4a-0268-4782-87bb-0db50ca08d02"}
                     priceCond={300}
                     priceFire={150}
                     priceIPTU={1000}

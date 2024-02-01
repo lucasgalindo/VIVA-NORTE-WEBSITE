@@ -66,9 +66,8 @@ export default function AnnouncementPage() {
     const response = await requester.post("/announcement/id", { id });
     return response.data;
   };
-  console.log(data)
   useEffect(() => {
-    fetchData().then((data) => setData((prevData) => ({ ...prevData, ...data })));
+    fetchData().then((data) => setData(data));
   }, [params]);
 
   return (
