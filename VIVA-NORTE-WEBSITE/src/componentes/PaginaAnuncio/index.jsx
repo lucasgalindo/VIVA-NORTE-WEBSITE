@@ -35,7 +35,7 @@ export default function PaginaAnuncio({data}) {
                     
                 </div>
                 {
-                    showModal ? <ModalPhotos data={data}></ModalPhotos> : null
+                    showModal ? <ModalPhotos setModal={setShowModal} data={data}></ModalPhotos> : null
                 }
             </div>
         </section>

@@ -10,7 +10,7 @@ export default function Characters({featuresArray, data}){
 
             if (data.details[keys[key]] === 1) {
                         numberPhotos.current += 1;
-                        return <div key={key} className='alinharItens2'>
+                        return <div key={keys[key]} className='alinharItens2'>
                         <img src="../../../public/imagens/tamanhoM2.png" />
                         <p>{element}</p>
                         </div>
