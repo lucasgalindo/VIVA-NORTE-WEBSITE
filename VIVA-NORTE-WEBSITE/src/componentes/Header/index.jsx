@@ -5,7 +5,6 @@ import ModalLogin from '../ModalLogin'
 import HeaderLogged from '../HeaderLogged'
 import { useNavigate, useNavigation } from 'react-router-dom'
 
-
 export default function Header() {
     const [menu, setMenu] = useState("start")
     const navigate = useNavigate();
@@ -20,7 +19,7 @@ export default function Header() {
                 <div className="textButton">
                     <a href="">Buscar Imóveis</a>
                     <a href="">Anunciar Imóveis</a>
-                    <a href="">Área do corretor</a>
+                    <a onClick={()=>navigate("/corretor_page")}>Área do corretor</a>
                     <a href="">Segurança</a>
                     <a href="">Sobre a Viva Norte</a>
                 </div>

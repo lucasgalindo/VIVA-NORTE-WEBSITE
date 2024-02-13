@@ -7,6 +7,7 @@ export default function Characters({ data, setModal }) {
     }
     
     return (      
+
         <div className='fotosSecundarias'>
 
         {data.pictures.map((element, index) => {
@@ -14,7 +15,7 @@ export default function Characters({ data, setModal }) {
                 return (<div className={`photo n-${index}`}>
                     <img key={index} className="secondary-photo" src={element.url} alt="foto secondaria"></img>
                     <label onClick={OpenModal} className="label-last-photo">
-                        <img src="./../../../../public/galery.png" alt="asdasd" />
+                        <img src="./../../../../public/galery.png" alt="" />
                         Mostrar todas as fotos
                     </label>
                 </div>)

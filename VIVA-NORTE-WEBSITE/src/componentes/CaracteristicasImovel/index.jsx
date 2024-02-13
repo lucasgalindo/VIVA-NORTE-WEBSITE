@@ -81,7 +81,7 @@ export default function CaracteristicasImovel({ data }) {
                     left: "-105px",
                     height: "230px",
                     position: "absolute"
-                }} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                }}></iframe>
             </div>
             <div className='chamadaBottom'>
                 <h3> Ficou interessado? Envie uma mensagem! </h3>

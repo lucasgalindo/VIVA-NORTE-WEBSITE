@@ -12,19 +12,21 @@ export default function ModalPhotos({ data, setModal }) {
     }
     const [imageClass, setImageClass] = useState("");
 
+    
+
     const HandlerClass = () => {
         setImageClass("new-photo");
-        setTimeout(() => {
+        setTimeout(()=>{
             setImageClass("");
         }, 500)
     }
 
 
     return (
-        <div className="fullscreen-container mostDark" onClick={() => { }}>
-
+        
+        <div onClick={()=>setModal(false)} className="fullscreen-container mostDark">
             <div className="wrapper-caurosel-photos">
-                <div className="carousel-photos">
+                <div className="carousel-photos" >
                     <img className={imageClass} src={data.pictures[imageInScreen].url} alt="" />
                 </div>
                 <div style={{
@@ -38,9 +40,10 @@ export default function ModalPhotos({ data, setModal }) {
                         }}
                     >
                         {data.pictures.map(({ url }, index) => {
-                            return <img key={index} className={imageInScreen == index ? "selected-carousel-photo-below" : ""} onClick={() => {
-                                HandlePhoto(index)
-                                HandlerClass()
+                            return <img key={index} className={imageInScreen == index ? "selected-carousel-photo-below" : ""} onClick={(e) => {
+                                e.stopPropagation();
+                                HandlePhoto(index);
+                                HandlerClass();
                             }} src={url} alt="" />
                         })}
                     </div>

@@ -64,62 +64,6 @@ export default function ForYou() {
                     address={"Av. Barreto de Menezes"}
                     pictures={pictures}
                 />
-            <Announcement
-                    id={1}
-                    priceCond={300}
-                    priceFire={150}
-                    priceIPTU={1000}
-                    price={390000}
-                    name={"Prince Antonio Maia"}
-                    description={"Loft Prince Antônio Maia individual com uma área de aprox. 60m² quadrados."}
-                    neighborhood={"Tejipio"}
-                    city={"Recife"}
-                    details={details}
-                    address={"Av. Barreto de Menezes"}
-                    pictures={pictures}
-                />
-            <Announcement
-                    id={1}
-                    priceCond={300}
-                    priceFire={150}
-                    priceIPTU={1000}
-                    price={390000}
-                    name={"Prince Antonio Maia"}
-                    description={"Loft Prince Antônio Maia individual com uma área de aprox. 60m² quadrados."}
-                    neighborhood={"Tejipio"}
-                    city={"Recife"}
-                    details={details}
-                    address={"Av. Barreto de Menezes"}
-                    pictures={pictures}
-                />
-            <Announcement
-                    id={1}
-                    priceCond={300}
-                    priceFire={150}
-                    priceIPTU={1000}
-                    price={390000}
-                    name={"Prince Antonio Maia"}
-                    description={"Loft Prince Antônio Maia individual com uma área de aprox. 60m² quadrados."}
-                    neighborhood={"Tejipio"}
-                    city={"Recife"}
-                    details={details}
-                    address={"Av. Barreto de Menezes"}
-                    pictures={pictures}
-                />
-            <Announcement
-                    id={1}
-                    priceCond={300}
-                    priceFire={150}
-                    priceIPTU={1000}
-                    price={390000}
-                    name={"Prince Antonio Maia"}
-                    description={"Loft Prince Antônio Maia individual com uma área de aprox. 60m² quadrados."}
-                    neighborhood={"Tejipio"}
-                    city={"Recife"}
-                    details={details}
-                    address={"Av. Barreto de Menezes"}
-                    pictures={pictures}
-                />
                 {
                     clickButtonFilter ? <EspecificFilter setClickButtonFilter={setClickButtonFilter}/> : null
                 }

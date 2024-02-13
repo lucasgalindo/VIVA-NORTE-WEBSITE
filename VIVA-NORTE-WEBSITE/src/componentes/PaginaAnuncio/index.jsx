@@ -1,16 +1,33 @@
 import './PaginaAnuncio.css'
-import { useState } from 'react'
+import { useContext, useEffect, useReducer, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faHeart as unFavorited} from "@fortawesome/free-regular-svg-icons"
 import { faHeart as favorited } from '@fortawesome/free-solid-svg-icons';
 import Photos from "./components/photos"
 import ModalPhotos from '../ModalPhotos/ModalPhotos';
+import { LoginContext } from '../../context/profile.context';
+import { Reducer_Favorites } from '../../Reducer/AddNewFavorite';
 export default function PaginaAnuncio({data}) {
-
-    const [favorite, setFavorite] = useState(false);
+    const {credentials, setCredentials} = useContext(LoginContext)
+    const [dataCredentials, setDataCredentials] = useState(credentials);
+    const [state, dispatch] = useReducer(Reducer_Favorites, {credentials: dataCredentials, setCredentials: setDataCredentials})
+    const [favorite, setFavorite] = useState(credentials.favorites.includes(data['announcement'].id_announcement));
     const [showModal, setShowModal] = useState(false);
+
+    
+    useEffect(()=>{
+        setCredentials(dataCredentials);
+    }, [dataCredentials.favorites])
+
+
     const FavoriteAnnouncement = () =>{
-        setFavorite(!favorite);
+        if(favorite){
+            dispatch({type: "remove", payload: data.announcement.id_announcement})
+        }
+        else{
+            dispatch({type: "add", payload: data.announcement.id_announcement})
+        }
+        setFavorite(!favorite)
     }
     
     return (
@@ -21,7 +38,7 @@ export default function PaginaAnuncio({data}) {
                 </div>
                 <div className='favoritarAnuncio'>
                     <button onClick={FavoriteAnnouncement} className={`favorite-container-pag ${favorite ? "actived-favorited" : ""}`}>
-                    <FontAwesomeIcon icon={ favorite ? favorited : unFavorited} color={favorite ? 'red' : undefined}/>
+                    <FontAwesomeIcon icon={ dataCredentials.favorites.includes(data['announcement'].id_announcement) ? favorited : unFavorited} color={dataCredentials.favorites.includes(data['announcement'].id_announcement) ? 'red' : undefined}/>
                     </button>
                     <p>Favoritar</p>
                 </div>
