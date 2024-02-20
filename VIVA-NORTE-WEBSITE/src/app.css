@@ -12,3 +12,29 @@
 body{
     overflow-x: hidden;
 }
+.expanded{
+    transition: 0.2s;
+    height: 100px !important;
+    border-bottom: 1px solid #E7E6EB;
+}
+
+.circle_event{
+
+}
+
+.block-span-shower::before{
+    content: "";
+    top: -4px;
+    border: 1px solid black;
+    left: calc(50% - 16px);
+    width: 30px;
+    height: 30px;
+    opacity: 0.2;
+    z-index: -2;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #D9D9D9 ;
+}
+.block-span-shower{
+    position: relative;
+}
