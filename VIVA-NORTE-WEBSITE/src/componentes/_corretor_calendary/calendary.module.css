@@ -100,6 +100,7 @@
 }
 
 .weeks_agenda{
+    position: relative;
     transition: 0.2s;
     height: 20px;
     display: flex;
@@ -110,7 +111,8 @@
 
 .data_result{
     position: absolute;
-    top: 20px;
+    width: 872px;
+    top: 30px;
 }
 
 .select{

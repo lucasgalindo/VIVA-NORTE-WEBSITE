@@ -69,6 +69,7 @@ export default function Calendary() {
 
   }
   const HandleAgenda = () => {
+    
     const firstDay = new Date(currentYear, monthSelect, 1);
     const lastDay = new Date(currentYear, monthSelect + 1, 0);
     const arrayDate = [];
@@ -227,7 +228,7 @@ export default function Calendary() {
                  {
                   child.map((element, i) => {
                     return (
-                    <article className={styles.article_agenda}>
+                    <article key={i} className={styles.article_agenda}>
                       <span onClick={(e)=>{
                         const section = document.getElementById(index);
                         const spanShower = document.getElementsByClassName("block-span-shower");
@@ -251,14 +252,27 @@ export default function Calendary() {
                         else{
                           e.currentTarget.parentNode.classList.add("block-span-shower");
                           section.classList.add("expanded", i)
+                          newDate.forEach((element, index) => {
+                            element.forEach((component, indice)=>{
+                              const data = {
+                                day: 0,
+                                event: component.event
+                              }
+                              newDate[index][indice] = data;
+                            })
+                          });
                           newDate[index][i] = {...newDate[index][i], isSelected: true}
                         }
-                      }} key={i} className={styles.day_agenda}>{element.day}</span>
+                        setCurrentDate(newDate);
+                      }} key={i} className={styles.day_agenda}>
+                        {element.day}
+                        </span>
                       {
                         currentDate[index][i].isSelected ? <div style={{
-                          left: -i * 105 - 20
+                          left: -i * 105 - 20,
+                          textAlign: 'start'
                         }} className={styles.data_result}>
-                          <span>Selected</span>
+                          <span>{currentDate[index][i].event?.data || "Não há nenhum compromisso nesta data"}</span>
                           </div> : null
                       }
                     </article> 
