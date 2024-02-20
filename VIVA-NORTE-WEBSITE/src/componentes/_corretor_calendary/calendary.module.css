@@ -110,8 +110,7 @@
 
 .data_result{
     position: absolute;
-    top: 0;
-    
+    top: 20px;
 }
 
 .select{

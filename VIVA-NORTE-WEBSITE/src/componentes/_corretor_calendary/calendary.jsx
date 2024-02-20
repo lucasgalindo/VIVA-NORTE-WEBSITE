@@ -255,7 +255,9 @@ export default function Calendary() {
                         }
                       }} key={i} className={styles.day_agenda}>{element.day}</span>
                       {
-                        currentDate[index][i] ? <div className={styles.data_result}>
+                        currentDate[index][i].isSelected ? <div style={{
+                          left: -i * 105 - 20
+                        }} className={styles.data_result}>
                           <span>Selected</span>
                           </div> : null
                       }
