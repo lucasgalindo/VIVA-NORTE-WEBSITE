@@ -1,7 +1,5 @@
 import { useState, useRef, useEffect, useLayoutEffect } from "react"
 import styles from "./calendary.module.css"
-import { faHamburger } from "@fortawesome/free-solid-svg-icons";
-
 export default function Calendary() {
   const [isActive, setIsActive] = useState(false);
   const selectRef = useRef(null);
