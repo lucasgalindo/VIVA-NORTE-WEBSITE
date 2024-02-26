@@ -1,15 +1,85 @@
-header { 
-    padding: 32px;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-}
+
 
 header a {
     text-decoration: none;
     color: black;
 }
 
+.container-when-are-mobile{
+    padding: 32px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    display: none;
+}
+.container-when-are-pc{
+    padding: 32px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+@media (width < 1260px){
+    .container-when-are-pc{
+        display: none;
+    }
+    .container-when-are-mobile{
+        display: flex;
+    }
+    .textButton{
+        flex-direction: column;
+    }
+}
+
+.container-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    align-items: center;
+    padding-top: 50px;
+    gap: 100px;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    transition: 1s all;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.inline-content{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+.menu-hamburguer{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 33px;
+    height: 20px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.bar-menu{
+    background-color: black;
+    width: 20px;
+    height: 2px;
+    transition: 0.5s;
+}
+
+
+.container-menu.start{
+    transform: translateX(-100%);
+}
+
+.container-menu.actived{
+    transform: translate(0);
+}
 
 .textButton {
     display: flex;
@@ -24,6 +94,22 @@ header a {
     border-radius: 50%;
 }
 
+.bar-menu.actived-0{
+    position: absolute;
+    transform: rotate(45deg);
+}
+.bar-menu.actived-1{
+    position: absolute;
+    transform: rotate(-45deg);
+
+}
+.bar-menu.actived-2{
+    display: none;
+}
+.bar-menu.actived-0, .bar-menu.actived-1{
+    top: 6px;
+    left: 6px;
+}
 .login {
     display: flex;
     align-items: center;
@@ -38,9 +124,9 @@ header a {
 }
 
 .login img {
-    margin-left: 16px;
+    margin-right: 5px;
     text-decoration: none;
-    margin-right: 32px;
+    height: 30px;
 }
 
 

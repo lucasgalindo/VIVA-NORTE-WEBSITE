@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useLayoutEffect, useReducer, useState } from 'react';
 import './announcement.css'
 import location from "./../../../public/location.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,11 +6,19 @@ import { faHeart as unFavorited } from "@fortawesome/free-regular-svg-icons"
 import { faHeart as favorited } from '@fortawesome/free-solid-svg-icons';
 import { faFireExtinguisher } from '@fortawesome/free-solid-svg-icons';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { LoginContext } from '../../context/profile.context';
+import { Reducer_Favorites } from '../../Reducer/AddNewFavorite';
+
 
 export default function Announcement({details, id, priceFire, priceIPTU, priceCond, price, name, description, pictures, address, neighborhood, city }) {
     const [diffence, setDifference] = useState(10);
     const [circles, setCircles] = useState([]);
-    const [favorite, setFavorite] = useState(false);
+    const {credentials, setCredentials} = useContext(LoginContext)
+    const [data, setData] = useState(credentials);
+    const [state, dispatch] = useReducer(Reducer_Favorites, {credentials: data, setCredentials: setData})
+    const [favorite, setFavorite] = useState(credentials.favorites.includes(id));
+
+
 
     const PTReal = new Intl.NumberFormat(
         "pt-BR", {
@@ -18,7 +26,7 @@ export default function Announcement({details, id, priceFire, priceIPTU, priceCo
         currency: "BRL"
     }
     )
-    useEffect(() => {
+    useLayoutEffect(() => {
         let aux = []
         pictures.forEach(element => {
             if (aux.length === 0) {
@@ -30,9 +38,23 @@ export default function Announcement({details, id, priceFire, priceIPTU, priceCo
         })
         setCircles(aux);
     }, [])
+    
+
+    useEffect(()=>{
+        console.log(data)
+        setCredentials(data);
+    }, [data])
 
     const FavoriteAnnouncement = () => {
-        setFavorite(!favorite);
+
+        if(favorite){
+            dispatch({type: "remove", payload: id})
+        }
+        else{
+            dispatch({type: "add", payload: id})
+        }
+        setFavorite(!favorite)
+        
     }
 
     const ChangeImageToLeft = (size, key) => {
@@ -47,11 +69,6 @@ export default function Announcement({details, id, priceFire, priceIPTU, priceCo
         })
         setDifference(initial - size);
     }
-
-
-
-
-
     const navigate = useNavigate();
     return (
         <div className="annoucement-container">

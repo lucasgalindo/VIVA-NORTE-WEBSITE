@@ -6,7 +6,6 @@ export default function Filter () {
         <section className='containerFiltros'>
             <a href="" className='linkFiltro'>
                 <div className='filtroCentral'>
-
                     <div className='filtroTipoImovel'>
                         <h3>Qual</h3>
                         <p>Selecione o tipo de imóvel</p>

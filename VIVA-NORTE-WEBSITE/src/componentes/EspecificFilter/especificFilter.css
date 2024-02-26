@@ -5,6 +5,7 @@
     max-height: 773px;
     width: 70%;
     height: 80%;
+    overflow-y: scroll;
     padding: 50px;
     border-radius: 20px;
 }

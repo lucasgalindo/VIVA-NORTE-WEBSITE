@@ -1,13 +1,13 @@
 .fullscreen-container{
     display: flex;
-    width: 100vw;
-    left: 0;
     align-items: center;
     justify-content: center;
     top: 0;
-    height: 100vh;
+    bottom: 0;
+    left: 0;
+    right: 0;    
     z-index: 5;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(1px);
     background-color: #7A7A7A8e;
     position: fixed;
     animation: start-container 0.3s;
@@ -271,14 +271,14 @@
     gap: 30px;
 }
 .button-generic-modal{
-    width: 174px;
+    width: clamp(70px, 20vw, 174px);
     transition: 0.2s;
     height: 50px;
     background-color: transparent;
     border-radius: 100px;
     font-weight: 500;
     border: 1px solid #262729;
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
 }
 .button-generic-modal:hover{
     transform: scale(1.05);

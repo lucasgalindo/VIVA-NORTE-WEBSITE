@@ -66,12 +66,12 @@ export default function Login({Modal, setModal, setActived}){
                 <div className="login-modal-section">
                             
                             <div className="input-field login-camp">
-                                <label htmlFor="email">Email</label>
-                                <input onChange={(event)=>ChangingCredentials(event, "email")} type="email" placeholder="Insirar o email do usuário aqui" name="email" id="name"/>
+                                <label htmlFor="email-login">Email</label>
+                                <input onChange={(event)=>ChangingCredentials(event, "email")} type="email" placeholder="Insirar o email do usuário aqui" name="email-login" id="email-login"/>
                             </div>
                             <div className="input-field login-camp password">
-                                <label htmlFor="password">Senha</label>
-                                <input onChange={(event)=>ChangingCredentials(event, "password")} type={toggleVisibilityPassword ? "password" : "text"} placeholder="Insirar o email do usuário aqui" name="email" id="name"/>
+                                <label htmlFor="password-login">Senha</label>
+                                <input onChange={(event)=>ChangingCredentials(event, "password")} type={toggleVisibilityPassword ? "password" : "text"} placeholder="Insirar o email do usuário aqui" name="password-login" id="password-login"/>
                                 <div className="hiding" onMouseEnter={()=>{
                                     setToggleVisibilityPassword(false)
                                 }}

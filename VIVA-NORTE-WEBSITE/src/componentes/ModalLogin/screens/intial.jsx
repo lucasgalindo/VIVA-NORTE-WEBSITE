@@ -7,7 +7,6 @@ export default function Initial({ Modal, setModal, setActived }) {
         if (Modal == "login" || current == "login") {
             if (Modal == "initial") {
                 setTimeout(()=>{
-                    
                 setChanger("actived-to-right")
                 setCurrent(Modal);
                 }, 700)
@@ -43,7 +42,7 @@ export default function Initial({ Modal, setModal, setActived }) {
             <span className="wellcome-subtitle">Aqui você encontra o seu lugar na Zona Norte de Recife-PE.</span>
             <div className="buttons-section">
                 <button className="button-generic-modal" onClick={() => setModal("create")} >Criar Conta</button>
-                <button className="button-generic-modal" onClick={() => setModal("login")} z>Entrar</button>
+                <button className="button-generic-modal" onClick={() => setModal("login")}>Entrar</button>
             </div>
             <div className="or-container"><span>Ou</span></div>
             <button className="google-button button-generic-modal">

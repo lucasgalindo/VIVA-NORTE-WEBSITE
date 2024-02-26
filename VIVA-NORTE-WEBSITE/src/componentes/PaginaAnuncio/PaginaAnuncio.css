@@ -12,6 +12,86 @@
     font-size: 20px;
 }
 
+.fotosSecundarias{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo > label{
+    display: none;
+}
+.photo.n-6 > label{
+    display: flex !important;
+}
+#last{
+    position: relative;
+}
+.photo{
+    position: relative;
+}
+.label-last-photo > img{
+    border-radius: 0 !important;
+}
+
+@media (width < 1853px) {
+    .photo.n-5, .photo.n-6 {
+        display: none;
+    }
+    .photo > label{
+        display: none;
+    }
+    .photo.n-4 > label{
+        display: flex;
+    }
+}
+@media (width <= 1536px) {
+    .photo.n-3, .photo.n-4 {
+        display: none;
+    }
+    .photo > label{
+        display: none;
+    }
+    .photo.n-2 > label{
+        display: flex;
+    }
+}
+@media (width <= 1130px) {
+    .photo{
+        display: none;
+    }
+}
+
+.label-last-photo{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.57);
+    position: absolute;
+    padding: 10px;
+    border-radius: 8px;
+    right: 20px;
+    bottom: 20px;
+    backdrop-filter: blur(2px);
+}
+
+.secondary-photo{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.main-photo{
+    width: 670px;
+    height: 505px;
+    object-fit: cover;
+}
+
+button.favorite-container-pag{
+    background-color: transparent;
+    border: none;
+}
+
 .actived-favorited{
     animation: ActivedFav 1s;
 }
