@@ -58,6 +58,8 @@
     display: flex;
     border: 1px solid #EFEFEF;
     flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .status{
@@ -81,7 +83,17 @@
 
 .article_agenda{
     width: 40px;
+    position: relative;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.article_agenda:hover{
+    background-color: #E7E6EB;
 }
 
 .day_agenda{
@@ -111,7 +123,7 @@
 .data_result{
     position: absolute;
     top: 0;
-    
+    right: 0;
 }
 
 .select{
@@ -119,7 +131,7 @@
     color: white;
     padding: 10px;
     padding-right: 50px;
-    background-color: #979797;
+    background-color: #0566AE;
     border-radius: 5px;
 }
 
@@ -132,6 +144,10 @@
 #figure_aligner_agenda{
     width: 200px;
     justify-content: center;
+}
+
+@keyframes bouncingDay {
+    
 }
 
 .button_agenda_left{
